@@ -13,6 +13,52 @@ Go to the Project build settings (Project->Edit Project Settings->Build) and fin
 
 	/usr/include/libxml2
 
+## Example
+
+SampleViewController.h
+
+	#import <UIKit/UIKit.h>
+	#import "JakimSolatParser.h"
+
+	@interface SampleViewController : UIViewController <JakimSolatDelegate> {
+    		// instance variables
+	}
+
+SampleViewController.m
+
+	- (void)viewDidLoad
+	{
+    		[super viewDidLoad];
+   
+    		JakimSolatParser *parser = [[JakimSolatParser alloc] initWithCode:@"sgr03"];
+    		parser.delegate = self;
+    		[parser parse];
+	}
+
+	#pragma mark - Jakim solat delegate
+
+	- (void)jakimSolatParser:(JakimSolatParser *)parser didParsePrayerTime:(JakimPrayerTime *)prayerTime
+	{
+    		NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    		[dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+8"]];
+    		[dateFormatter setDateFormat:@"dd-MM-yyyy HH:mm:ss z"];
+    
+    		NSLog(@"Kawasan = %@", prayerTime.location);
+    		NSLog(@"Kod = %@", prayerTime.code);
+    		NSLog(@"Imsak = %@", [dateFormatter stringFromDate:prayerTime.imsak]);
+    		NSLog(@"Subuh = %@", [dateFormatter stringFromDate:prayerTime.subuh]);
+    		NSLog(@"Syuruk = %@", [dateFormatter stringFromDate:prayerTime.syuruk]);
+    		NSLog(@"Zohor = %@", [dateFormatter stringFromDate:prayerTime.zohor]);
+    		NSLog(@"Asar = %@", [dateFormatter stringFromDate:prayerTime.asar]);
+    		NSLog(@"Maghrib = %@", [dateFormatter stringFromDate:prayerTime.maghrib]);
+    		NSLog(@"Isyak = %@", [dateFormatter stringFromDate:prayerTime.isyak]);
+	}
+
+	- (void)jakimSolatParser:(JakimSolatParser *)parser didFailWithError:(NSError *)error
+	{
+    		NSLog(@"JakimSolatWrapper : Failed!");
+	}
+
 ## Available data
 
 Here is a list of the available properties for prayer time objects:
