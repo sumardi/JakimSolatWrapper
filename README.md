@@ -75,6 +75,8 @@ Here is a list of the available properties for prayer time objects:
 - (`NSDate`)`prayerTime.maghrib`
 - (`NSDate`)`prayerTime.isyak`
 
+For list of code available, refer JAKIM's website : <http://www.e-solat.gov.my/e-solat.php>
+
 ## License
 
 Copyright (c) 2012 Wutmedia. 
