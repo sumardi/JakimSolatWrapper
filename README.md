@@ -13,6 +13,22 @@ Go to the Project build settings (Project->Edit Project Settings->Build) and fin
 
 	/usr/include/libxml2
 
+## Available data
+
+Here is a list of the available properties for prayer time objects:
+
+#### JakimPrayerTime
+
+- (`NSString`)`prayerTime.location`
+- (`NSString`)`prayerTime.kod`
+- (`NSDate`)`prayerTime.imsak`
+- (`NSDate`)`prayerTime.subuh`
+- (`NSDate`)`prayerTime.syuruk`
+- (`NSDate`)`prayerTime.zohor`
+- (`NSDate`)`prayerTime.asar`
+- (`NSDate`)`prayerTime.maghrib`
+- (`NSDate`)`prayerTime.isyak`
+
 ## License
 
 Copyright (c) 2012 Wutmedia. 
