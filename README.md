@@ -1,3 +1,6 @@
+> This project is no longer maintained. Feel free to fork it if you feel the need but I strongly urged you 
+> to shift over to using [OCPrayerTimes](https://github.com/sumardi/OCPrayerTimes).
+
 # JakimSolatWrapper
 
 An Objective-C class for pulling and parsing prayer times from JAKIM e-Solat Portal. Simple and clean implementation that reads the following information from the web:
@@ -79,8 +82,8 @@ For list of code available, refer JAKIM's website : <http://www.e-solat.gov.my/e
 
 ## License
 
-Copyright (c) 2012 Wutmedia. 
-Author: Sumardi Shukor <sumardi@wutmedia.com>
+Copyright (c) 2012 Wutmedia.  
+Author: Sumardi Shukor <sumardi.shukor@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -108,5 +111,5 @@ THE SOFTWARE.
 
 If you use JakimSolatWrapper on your iPhone/iPad/Mac app then please do let me know, I would love to check it out. 
 
-E-mail : <sumardi@wutmedia.com>
+E-mail : <sumardi.shukor@gmail.com>  
 Twitter : <http://twitter.com/sumardi>
